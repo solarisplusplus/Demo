@@ -38,12 +38,16 @@ App = {
         }   
       });
       //Display timestamp of latest block as UTC
-      var datestamp = web3.eth.getBlock('latest').timestamp
-        date = new Date(datestamp*1000);      
+      web3.eth.getBlock('latest', function(err, result){
+        if (err===null) {
+        var datestamp = result.timestamp;
+        var date = new Date(datestamp*1000);
         time = date.toUTCString();
-        $('#Τimestamp').text(time);    
+        $('#Τimestamp').text(time);
+        }
+      });
     },
-
+    
      initContract: function() {
           /*
            * Replace me...
