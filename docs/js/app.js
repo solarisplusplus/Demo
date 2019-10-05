@@ -24,6 +24,19 @@ App = {
           return App.initContract();
      },
 
+    //  displayAccountInfo: function() {
+    //    web3.eth.getCoinbase(function(err, account){
+    //      if (err === null) {
+    //        App.account = account;
+    //        $('#account').text(account)
+    //        web3.eth.getBalance(account, function(err, balance){
+    //          if(err === null) {
+    //            $('#accountBalance').text(balance);   
+    //          }
+    //       })
+    //     }     
+    //   });
+    // },
 
     displayAccountInfo: function(){
       //Get balance of 0x004FE394a794DCd0b5D2B2FdA364CD9f22859D27
